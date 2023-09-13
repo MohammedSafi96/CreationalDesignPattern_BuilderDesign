@@ -31,7 +31,7 @@ If you look at the illustrated diagram of Builder Design Pattern
 3. Director: Is responsible to constructs the object through the builder interface.
 4. Product: is the Main object that's constructed and Represents the complex object.
 
-5. //////////////////////////// Include Fluent Interface Design Pattern to this project /////////////////////////////////////////////
+///// Include Fluent Interface Design Pattern to this project /////
 6. Business Requirement : Provide an option to choose and build configuration of the system which is allocated to the employees. The configuration options that user can choose are RAM, HDD, USB Mouse etc. Choose the system configurations based on the computer type that we need to build. For example, A laptop users can choose touch screen and the desktop users can configure keyboard and mouse. 
 
 Fluent Interface : The idea behind a fluent interface is that one can apply multiple properties to an object by connecting them with dots and without having to re-specify the object each time
@@ -61,8 +61,9 @@ By returning the ISystemBuilder and by using this as the return statement we are
 Step 3 : Enhance the Configuration builder with Fluent Implementation
 
 Step 4 : Run the application and build the system. Notice that depending on the system type the respective system configurations are built using Fluent Builder implementation.
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////Super Important Summary/////////////////////////////////////////
+////////////////////////////////////////////////
+/////////////Super Important Summary///////////
+
 Builder Vs Factory and Abstract Factory
 
 Builder design pattern encapsulates complex creation into a single method. 
