@@ -1,4 +1,4 @@
-﻿using BuilderDesignPattren.Builder.IBuilder;
+using BuilderDesignPattren.Builder.IBuilder;
 using BuilderDesignPattren.Builder.Product;
 using System;
 using System.Collections.Generic;
@@ -11,30 +11,33 @@ namespace BuilderDesignPattren.Builder.ConcreteBuilder
     internal class LaptopBuilder : ISystemBuilder
     {
         ComputerSystem computer = new ComputerSystem();
-
-        public void AddDriver(string type)
+        // #Important: Add ISystemBuilder as a return type to achieve Fluent Interface Design Pattern
+        public ISystemBuilder AddDriver(string type)
         {
             computer.HDDSize = type;
+            return this; // return the computer object itslef like the ref param
         }
 
-        public void AddKeyboard(string type)
+        public ISystemBuilder AddKeyboard(string type)
         {
-            return;
+            return this; // return the computer object itslef like the ref param
         }
 
-        public void AddMemory(string type)
+        public ISystemBuilder AddMemory(string type)
         {
-            computer.RAM = type;    
+            computer.RAM = type;
+            return this; // return the computer object itslef like the ref param
         }
 
-        public void AddMouse(string type)
+        public ISystemBuilder AddMouse(string type)
         {
-           return;
+            return this; // return the computer object itslef like the ref param
         }
 
-        public void AddTouchScreen(string type)
+        public ISystemBuilder AddTouchScreen(string type)
         {
            computer.TouchScreen = type;
+            return this; // return the computer object itslef like the ref param
         }
         public ComputerSystem GetSystem()
         {
