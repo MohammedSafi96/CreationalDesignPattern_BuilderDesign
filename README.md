@@ -1,4 +1,4 @@
-# Builder Creational Design Pattern
+# Builder Design Pattern => Creational
 
 What is Builder Design Pattern 
 
